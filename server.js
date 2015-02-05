@@ -7,3 +7,5 @@ function onRequest(request, response) {
 }
 
 http.createServer(onRequest).listen(8888);
+
+exports.onRequest = onRequest;
