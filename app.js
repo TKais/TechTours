@@ -19,3 +19,7 @@ app.listen(3000, function(){
 app.get('/', function(req, res){
   res.render('index.ejs');
 });
+
+app.get('/apple', function(req, res){
+  res.render('apple.ejs');
+});
