@@ -31,3 +31,7 @@ app.get('/google', function(req, res){
 app.get('/facebook', function(req, res){
   res.render('facebook.ejs');
 });
+
+app.get('/about', function(req, res){
+  res.render('about.ejs');
+});
