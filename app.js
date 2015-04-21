@@ -10,7 +10,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.listen(3000, function(){
   console.log("Server listening on localhost:3000");
@@ -35,3 +35,5 @@ app.get('/facebook', function(req, res){
 app.get('/about', function(req, res){
   res.render('about.ejs');
 });
+
+
