@@ -32,8 +32,4 @@ app.get('/facebook', function(req, res){
   res.render('facebook.ejs');
 });
 
-app.get('/about', function(req, res){
-  res.render('about.ejs');
-});
-
 
