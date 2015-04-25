@@ -1,1 +1,3 @@
-alert("ready!");
+document.onload(function(){
+  alert("ready!");
+});
