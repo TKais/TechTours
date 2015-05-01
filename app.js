@@ -2,7 +2,17 @@ var http = require('http');
 var express = require('express');
 var path = require('path');
 var geohash = require('geohash').GeoHash;
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 
+var url = 'mongodb://localhost:3000/TechTours'
+
+
+MongoClient.connect(url, function(err, db){
+  assert.equal(null, err);
+  console.log("Connected to Mongo");
+  db.close
+});
 
 
 
