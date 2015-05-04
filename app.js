@@ -56,6 +56,6 @@ var mapRequest = http.get(mapUrl, function(response){
     console.log(buffer);
     data = JSON.parse(buffer);
   })
-})
+});
 
 
