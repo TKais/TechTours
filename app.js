@@ -7,6 +7,8 @@ var assert = require('assert');
 
 var url = 'mongodb://localhost:3000/TechTours'
 
+var mapUrl = "https://maps.googleapis.com/maps/api/js?key="
+
 
 MongoClient.connect(url, function(err, db){
   assert.equal(null, err);
@@ -41,5 +43,19 @@ app.get('/google', function(req, res){
 app.get('/facebook', function(req, res){
   res.render('facebook.ejs');
 });
+
+var mapRequest = http.get(mapUrl, function(response){
+  var buffer = "";
+  var data;
+
+  response.on("data", function(chunk){
+    buffer += chunk;
+  });
+
+  response.on("end", function(err){
+    console.log(buffer);
+    data = JSON.parse(buffer);
+  })
+})
 
 
