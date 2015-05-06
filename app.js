@@ -32,18 +32,6 @@ app.get('/', function(req, res){
   res.render('index.ejs');
 });
 
-app.get('/apple', function(req, res){
-  res.render('apple.ejs');
-});
-
-app.get('/google', function(req, res){
-  res.render('google.ejs');
-});
-
-app.get('/facebook', function(req, res){
-  res.render('facebook.ejs');
-});
-
 var mapRequest = http.get(mapUrl, function(response){
   var buffer = "";
   var data;
